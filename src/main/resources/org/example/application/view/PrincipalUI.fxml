@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="533.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.application.controller.MainUIController">
+    <children>
+        <Label layoutX="39.0" layoutY="34.0" text="Centro Esportivo">
+            <font>
+                <Font name="Cambria" size="32.0" />
+            </font>
+        </Label>
+      <TableView layoutX="1.0" layoutY="106.0" prefHeight="362.0" prefWidth="754.0">
+        <columns>
+          <TableColumn fx:id="cSportName" prefWidth="154.0" text="Esporte" />
+            <TableColumn fx:id="cTypeCourt" prefWidth="187.0" text="Tipo da Quadra" />
+            <TableColumn fx:id="cValueCourt" prefWidth="159.0" text="Valor Total" />
+            <TableColumn fx:id="cCourtSize" prefWidth="177.0" text="Tamanho" />
+            <TableColumn fx:id="cCapacity" prefWidth="76.0" text="Capacidade" />
+        </columns>
+      </TableView>
+      <Button layoutX="657.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="84.0" text="Alugar" />
+      <Button layoutX="14.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" text="Gerenciar Clientes" />
+      <Button layoutX="134.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Gerenciar Quadras Alugadas" />
+      <Button layoutX="591.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="144.0" text="Adicionar Quadra" />
+    </children>
+</AnchorPane>
