@@ -1,6 +1,6 @@
 package org.example.domain.entities.client;
 
-import org.example.domain.entities.court_rental.CourtRental;
+import org.example.domain.entities.sports_court_rental.SportsCourtRental;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -8,12 +8,16 @@ import java.util.List;
 public class Client {
     private String cpf;
     private String name;
-    private List<CourtRental> courtRentals = new ArrayList<>();
+    private List<SportsCourtRental> sportsCourtRentals = new ArrayList<>();
 
-    public Client(String cpf, String name, List<CourtRental> courtRentals) {
+    public Client(String cpf, String name, List<SportsCourtRental> courtRentals) {
         this.cpf = cpf;
         this.name = name;
-        this.courtRentals = courtRentals;
+        this.sportsCourtRentals = courtRentals;
+    }
+
+    public Client(String cpf, String name) {
+        this(cpf,name,null);
     }
 
     public Client() {
@@ -35,12 +39,22 @@ public class Client {
         this.name = name;
     }
 
-    public Iterator<CourtRental> getCourtRentals() {
-        return courtRentals.iterator();
+    public Iterator<SportsCourtRental> getSportsCourtRentals() {
+        return sportsCourtRentals.iterator();
     }
 
-    public void addCourtRental(CourtRental courtRental) {
-        if(courtRental == null) throw new IllegalArgumentException("CourtRental can not be null");
-        courtRentals.add(courtRental);
+    public void setSportsCourtRentals(List<SportsCourtRental> sportsCourtRentals) {
+        this.sportsCourtRentals = sportsCourtRentals;
+    }
+
+    public void addSportsCourtRental(SportsCourtRental sportsCourtRental) {
+        if(sportsCourtRental == null) throw new IllegalArgumentException("CourtRental can not be null");
+        sportsCourtRentals.add(sportsCourtRental);
+    }
+
+    public boolean removeSportsCourtRental(SportsCourtRental sportsCourtRental) {
+        if(sportsCourtRental == null)
+            throw new IllegalArgumentException("CourtRental can not be null");
+        return sportsCourtRentals.remove(sportsCourtRental);
     }
 }

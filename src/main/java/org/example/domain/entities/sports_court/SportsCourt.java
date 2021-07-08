@@ -1,12 +1,13 @@
 package org.example.domain.entities.sports_court;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public abstract class SportsCourt {
     private Integer id;
     private Boolean indoorCourt;
     private CourtSize courtSize;
-    private Double courtValue;
+    private BigDecimal courtValue;
 
     public abstract Integer getCapacity();
 
@@ -39,11 +40,11 @@ public abstract class SportsCourt {
         this.courtSize = courtSize;
     }
 
-    public void setCourtValue(Double courtValue) {
+    public void setCourtValue(BigDecimal courtValue) {
         this.courtValue = courtValue;
     }
 
-    public Double getCourtValue() {
+    public BigDecimal getCourtValue() {
         return courtValue;
     }
 

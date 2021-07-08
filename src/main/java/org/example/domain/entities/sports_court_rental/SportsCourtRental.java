@@ -1,27 +1,39 @@
-package org.example.domain.entities.court_rental;
+package org.example.domain.entities.sports_court_rental;
 
+import org.example.domain.entities.client.Client;
 import org.example.domain.entities.sports_court.SportsCourt;
 
 import java.time.LocalDate;
 
-public class CourtRental {
+public class SportsCourtRental {
     private Integer id;
     private SportsCourt sportCourt;
+    private Client client;
     private LocalDate date;
 
-    public CourtRental(Integer id, SportsCourt sportCourt, LocalDate date) {
+    public SportsCourtRental(Integer id, SportsCourt sportCourt, Client client, LocalDate date) {
         this.id = id;
         this.sportCourt = sportCourt;
+        this.client = client;
         this.date = date;
     }
 
-    public CourtRental(SportsCourt sportCourt, LocalDate date) {
+    public SportsCourtRental(SportsCourt sportCourt, Client client, LocalDate date) {
         this.sportCourt = sportCourt;
+        this.client = client;
         this.date = date;
     }
 
     public Integer getId() {
         return id;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public SportsCourt getSportCourt() {
