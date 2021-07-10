@@ -4,20 +4,23 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.application.Routes;
 
 import java.io.IOException;
 
 /**
  * JavaFX App
  */
-public class App extends Application {
+public class Window extends Application {
 
     private static Scene scene;
+    private static Object controller;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("PrincipalUI"));
+        scene = new Scene(loadFXML(Routes.principalUI));
         stage.setScene(scene);
         stage.show();
     }
@@ -27,8 +30,14 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        Parent parent = fxmlLoader.load(Window.class.getResource(fxml + ".fxml").openStream());
+        controller = fxmlLoader.getController();
+        return parent;
+    }
+
+    public static Object getController() {
+        return controller;
     }
 
     public static void main(String[] args) {

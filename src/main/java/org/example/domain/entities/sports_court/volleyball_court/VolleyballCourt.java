@@ -3,13 +3,19 @@ package org.example.domain.entities.sports_court.volleyball_court;
 import org.example.domain.entities.sports_court.CourtSize;
 import org.example.domain.entities.sports_court.SportsCourt;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class VolleyballCourt extends SportsCourt {
     private TypeOfVolleyball typeOfVolleyball;
 
-    public VolleyballCourt(Integer id, Boolean indoorCourt, CourtSize courtSize, TypeOfVolleyball typeOfVolleyball) {
-        super(id, indoorCourt, courtSize);
+    public VolleyballCourt(Integer id, Boolean indoorCourt, CourtSize courtSize, Double courtValue, TypeOfVolleyball typeOfVolleyball) {
+        super(id, indoorCourt, courtSize, courtValue);
+        this.typeOfVolleyball = typeOfVolleyball;
+    }
+
+    public VolleyballCourt(Boolean indoorCourt, CourtSize courtSize, Double courtValue, TypeOfVolleyball typeOfVolleyball) {
+        super(null, indoorCourt, courtSize, courtValue);
         this.typeOfVolleyball = typeOfVolleyball;
     }
 
@@ -33,6 +39,16 @@ public class VolleyballCourt extends SportsCourt {
             case BEACH: return 4;
             default: return null;
         }
+    }
+
+    @Override
+    public String getSportName() {
+        return "Vôlei";
+    }
+
+    @Override
+    public String getTypeOfSport() {
+        return typeOfVolleyball.toString();
     }
 
     @Override

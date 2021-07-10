@@ -31,7 +31,12 @@ public class DatabaseBuilder {
 
         sb.append("CREATE TABLE clients (\n");
         sb.append("cpf TEXT NOT NULL primary key,\n");
-        sb.append("name TEXT NOT NULL\n");
+        sb.append("name TEXT NOT NULL,\n");
+        sb.append("state TEXT NOT NULL,\n");
+        sb.append("city TEXT NOT NULL,\n");
+        sb.append("road TEXT NOT NULL,\n");
+        sb.append("number INTEGER NOT NULL,\n");
+        sb.append("complement TEXT\n");
         sb.append(");\n");
 
         System.out.println(sb.toString());

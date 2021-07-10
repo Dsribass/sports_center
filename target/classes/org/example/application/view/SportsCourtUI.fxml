@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="407.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.application.controller.SportsCourtUIController">
+    <children>
+        <Label layoutX="43.0" layoutY="36.0" text="Adicionar Quadra">
+            <font>
+                <Font name="Cambria" size="32.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="cbSelectSportName" layoutX="43.0" layoutY="108.0" onAction="#selectSportName" prefHeight="25.0" prefWidth="242.0" promptText="Esporte" />
+      <ComboBox fx:id="cbSelectTypeOfSportCourt" disable="true" layoutX="43.0" layoutY="156.0" prefHeight="25.0" prefWidth="160.0" promptText="Tipo da Quadra" />
+      <Label layoutX="44.0" layoutY="199.0" text="Tamanho">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="choiceIndoorCourt" layoutX="221.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Coberta" />
+      <RadioButton fx:id="checkBig" layoutX="46.0" layoutY="239.0" mnemonicParsing="false" text="Grande">
+         <toggleGroup>
+            <ToggleGroup fx:id="groupCheckSize" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="checkMedium" layoutX="137.0" layoutY="239.0" mnemonicParsing="false" text="Média" toggleGroup="$groupCheckSize" />
+      <RadioButton fx:id="checkSmall" layoutX="219.0" layoutY="239.0" mnemonicParsing="false" text="Pequena" toggleGroup="$groupCheckSize" />
+      <TextField fx:id="txtValue" layoutX="46.0" layoutY="287.0" prefHeight="25.0" prefWidth="242.0" promptText="Valor" />
+        <Button fx:id="btnInsertOrUpdate" layoutX="211.0" layoutY="349.0" mnemonicParsing="false" onAction="#insertOrUpdateEntity" prefHeight="32.0" prefWidth="84.0" text="Adicionar" />
+        <Button layoutX="41.0" layoutY="349.0" mnemonicParsing="false" onAction="#returnPage" prefHeight="32.0" prefWidth="84.0" text="Voltar" />
+    </children>
+</AnchorPane>

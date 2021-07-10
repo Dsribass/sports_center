@@ -1,4 +1,5 @@
 package org.example.application.controller;
 
-public class MainUIController {
+public enum UIMode {
+    INSERT,UPDATE,DETAIL
 }

@@ -51,4 +51,30 @@ public class SportsCourtRental {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
+    public String getCPFClient(){
+        return client.getCpf();
+    }
+
+    public String getSportName() {
+        return sportCourt.getSportName();
+    }
+
+    public Integer getIdSportCourt(){
+        return sportCourt.getId();
+    }
+
+    public String getTypeOfSport(){
+        return sportCourt.getTypeOfSport();
+    }
+
+    @Override
+    public String toString() {
+        return "SportsCourtRental{" +
+                "id=" + id +
+                ", sportCourt=" + sportCourt +
+                ", client=" + client +
+                ", date=" + date +
+                '}';
+    }
 }

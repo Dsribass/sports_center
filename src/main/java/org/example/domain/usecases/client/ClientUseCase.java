@@ -68,5 +68,13 @@ public class ClientUseCase {
             throw new IllegalArgumentException("CPF cannot be null");
         if(client.getName() == null)
             throw new IllegalArgumentException("Name cannot be null");
+        if(client.getAddress().getCity() == null)
+            throw new IllegalArgumentException("City cannot be null");
+        if(client.getAddress().getState() == null)
+            throw new IllegalArgumentException("State cannot be null");
+        if(client.getAddress().getRoad() == null)
+            throw new IllegalArgumentException("Road cannot be null");
+        if(client.getAddress().getNumber() == null)
+            throw new IllegalArgumentException("House Number cannot be null");
     }
 }

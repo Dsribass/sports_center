@@ -4,25 +4,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="533.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.application.controller.MainUIController">
+<AnchorPane prefHeight="533.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.application.controller.PrincipalUIController">
     <children>
-        <Label layoutX="39.0" layoutY="34.0" text="Centro Esportivo">
+        <Label layoutX="39.0" layoutY="34.0" text="Centro Esportivo" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="34.0">
             <font>
                 <Font name="Cambria" size="32.0" />
             </font>
         </Label>
-      <TableView layoutX="1.0" layoutY="106.0" prefHeight="362.0" prefWidth="754.0">
+      <TableView fx:id="tableView" layoutX="1.0" layoutY="106.0" prefHeight="362.0" prefWidth="754.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
         <columns>
           <TableColumn fx:id="cSportName" prefWidth="154.0" text="Esporte" />
-            <TableColumn fx:id="cTypeCourt" prefWidth="187.0" text="Tipo da Quadra" />
-            <TableColumn fx:id="cValueCourt" prefWidth="159.0" text="Valor Total" />
+            <TableColumn fx:id="cTypeOfSport" prefWidth="187.0" text="Tipo da Quadra" />
+            <TableColumn fx:id="cCourtValue" prefWidth="159.0" text="Valor Total" />
             <TableColumn fx:id="cCourtSize" prefWidth="177.0" text="Tamanho" />
             <TableColumn fx:id="cCapacity" prefWidth="76.0" text="Capacidade" />
         </columns>
       </TableView>
-      <Button layoutX="657.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="84.0" text="Alugar" />
-      <Button layoutX="14.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" text="Gerenciar Clientes" />
-      <Button layoutX="134.0" layoutY="487.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Gerenciar Quadras Alugadas" />
-      <Button layoutX="591.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="144.0" text="Adicionar Quadra" />
+      <Button layoutX="657.0" layoutY="487.0" mnemonicParsing="false" onAction="#rentSportsCourt" prefHeight="32.0" prefWidth="84.0" text="Alugar" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button layoutX="14.0" layoutY="487.0" mnemonicParsing="false" onAction="#clientsManagement" prefHeight="32.0" prefWidth="114.0" text="Gerenciar Clientes" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button layoutX="136.0" layoutY="487.0" mnemonicParsing="false" onAction="#rentedSportsCourtManagement" prefHeight="32.0" prefWidth="174.0" text="Gerenciar Quadras Alugadas" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="136.0" />
+      <Button layoutX="621.0" layoutY="38.0" mnemonicParsing="false" onAction="#addSportsCourt" prefHeight="32.0" prefWidth="114.0" text="Adicionar Quadra" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="38.0" />
+      <Button layoutX="545.0" layoutY="38.0" mnemonicParsing="false" onAction="#updateSportsCourt" prefHeight="32.0" prefWidth="70.0" text="Atualizar" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="38.0" />
+      <Button layoutX="468.0" layoutY="38.0" mnemonicParsing="false" onAction="#removeSportsCourt" prefHeight="32.0" prefWidth="70.0" text="Remover" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="38.0" />
+      <Button layoutX="392.0" layoutY="38.0" mnemonicParsing="false" onAction="#detailSportsCourt" prefHeight="32.0" prefWidth="70.0" text="Detalhar" />
     </children>
 </AnchorPane>
