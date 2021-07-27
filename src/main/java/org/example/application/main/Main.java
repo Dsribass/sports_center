@@ -5,11 +5,6 @@ import org.example.application.repository.sqlite.SqliteClientDAO;
 import org.example.application.repository.sqlite.SqliteSportCourtDAO;
 import org.example.application.repository.sqlite.SqliteSportsCourtRentalDAO;
 import org.example.application.view.Window;
-import org.example.domain.entities.client.Client;
-import org.example.domain.entities.sports_court.CourtSize;
-import org.example.domain.entities.sports_court.SportsCourt;
-import org.example.domain.entities.sports_court.soccer_court.SoccerCourt;
-import org.example.domain.entities.sports_court.soccer_court.TypeOfSoccer;
 import org.example.domain.usecases.client.ClientDAO;
 import org.example.domain.usecases.client.ClientUseCase;
 import org.example.domain.usecases.sports_court.SportCourtDAO;
@@ -36,16 +31,6 @@ public class Main {
     public static void main(String[] args) {
         buildDatabaseIfMissing();
         injectDependencies();
-//        SportsCourt sportsCourt = new SoccerCourt(
-//                true,
-//                CourtSize.BIG,
-//                120.0,
-//                TypeOfSoccer.FIELD
-//        );
-//        sportsCourtUseCase.insert(sportsCourt);
-//        sportsCourtUseCase.fetchAll().forEach(System.out::println);
-//        System.out.println(sportsCourtUseCase.findOne(1).get().getSportName());
-
         Window.main(args);
     }
 

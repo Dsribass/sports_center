@@ -17,7 +17,6 @@ import org.example.domain.entities.sports_court_rental.SportsCourtRental;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
 import static org.example.application.main.Main.*;
 
